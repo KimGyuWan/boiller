@@ -1,62 +1,151 @@
 * {
-    margin: 0;
-    padding: 0;
-    color: #333;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  text-decoration: none;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a:hover {
-    color: red;
+  color: red;
 }
 
 .bg-check {
-    background-color: gray;
+  background-color: gray;
 }
 
 .position-rel {
-    position: relative;
+  position: relative;
 }
 
 .position-abs {
-    position: absolute;
+  position: absolute;
 }
 
 .d-flex {
-    display: flex;
+  display: flex;
 }
 
-.jcb {
-    justify-content: space-between;
+.justifycontent-spacebetween {
+  justify-content: space-between;
 }
 
-.aic {
-    align-items: center;
+.alignitems-center {
+  align-items: center;
 }
 
 .ofh {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .h-0 {
-    height: 0;
+  height: 0;
 }
 
 .h100 {
-    height: 100px;
+  height: 100px;
 }
 
 .h300 {
-    height: 300px;
+  height: 300px;
 }
 
 .h200 {
-    height: 200px;
+  height: 200px;
 }
 
 .container {
-    width: 1200px;
-    margin: 0 auto;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* header */
+
+#hd {
+  background-color: darkgrey;
+  position: relative;
+}
+
+#hd h1 {
+  margin-left: 2rem;
+}
+
+#gnb .d1li {
+  height: 100px;
+  padding: 0 2rem;
+}
+
+#gnb>li>a {
+  font-size: 22px;
+  padding: 10px 30px;
+  display: block;
+}
+
+#gnb .d1li .d1a {
+  display: block;
+  padding-top: 40px;
+}
+
+#gnb .d2ul {
+  top: 100%;
+  left: 0;
+  right: 0;
+  text-indent: 2rem;
+  background-color: transparent;
+  max-height: 0;
+  overflow: hidden;
+  line-height: 2;
+  border: 1px solid transparent;
+  border-top: 0;
+  transition: 0.5s;
+}
+
+#gnb:hover .d2ul {
+  max-height: 200px;
+  border-color: black;
+  background-color: white;
+}
+
+#gnb .d1li:hover,
+.d2li:hover {
+  background-color: black;
+}
+
+#gnb>.d1li ul li:hover>a,
+#gnb>.d1li:hover>a {
+  color: white;
+}
+
+#gnb::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  height: 0px;
+  transition: 0.5s;
+}
+
+#gnb:hover::before {
+  height: 200px;
+}
+
+/* slide */
+
+
+
+/* middle */
+
+.tabs,
+.banner,
+.go {
+  flex-grow: 1;
+}
+
+#ft {
+  background-color: darkgrey;
 }
